@@ -1,0 +1,370 @@
+:root {
+    --Dark_Blue_Dark_Mode_Elements: hsl(209, 23%, 22%);
+    --Very_Dark_Blue_Dark_Mode_Background: hsl(207, 26%, 17%);
+    --Very_Dark_Blue_Light_Mode_Text: hsl(200, 15%, 8%);
+    --Dark_Gray_Light_Mode_Input: hsl(0, 0%, 52%);
+    --Very_Light_Gray_Light_Mode_Background: hsl(0, 0%, 98%);
+    --White_Dark_Mode_Text_Light_Mode_Elements: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Nunito';
+    width: 100%;
+    background-color: var(--Very_Dark_Blue_Dark_Mode_Background);
+    color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    transition: all 5s ease-in-out;
+}
+
+body.light_mode {
+    background-color: var(--Very_Light_Gray_Light_Mode_Background);
+    color: var(--Very_Dark_Blue_Light_Mode_Text);
+    transition: all 5s ease-in-out;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 5%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    transition: all 5s ease-in-out;
+}
+
+body.light_mode nav {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
+}
+
+nav .logo {
+    width: 50%;
+}
+
+nav .logo h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+nav .modes {
+    width: 23%;
+}
+
+nav .modes .switcher {
+    width: 100%;
+}
+
+nav .modes .switcher .mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+nav .modes .switcher .mode .moon {
+    margin-right: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_region {
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.search_region .search_bar {
+    display: flex;
+    width: 80%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    margin-left: 10%;
+    padding: 2%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    transition: all 5s ease-in-out;
+}
+
+body.light_mode .search_region .search_bar {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
+}
+
+.search_region .search_bar .search_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.search_region .search_bar .search_icon ion-icon {
+    font-size: 2rem;
+}
+
+body.light_mode .search_region .search_bar .search_icon ion-icon {
+    color: var(--Dark_Gray_Light_Mode_Input);
+    transition: all 5s ease-in-out;
+}
+
+.search_region .search_bar .search_form {
+    width: 70%;
+    margin-left: 1%;
+}
+
+.search_region .search_bar .search_form input {
+    width: 100%;
+    padding: 2%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 1.5rem;
+    transition: all 5s ease-in-out;
+}
+
+body.light_mode .search_region .search_bar .search_form input {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    color: var(--Dark_Gray_Light_Mode_Input);
+    transition: all 5s ease-in-out;
+}
+
+.search_region .search_bar .search_form input::placeholder {
+    color: inherit;
+    font-family: inherit;
+}
+
+.search_region .filter {
+    width: 40%;
+    margin-left: 10%;
+}
+
+.search_region .filter .filter_box {
+    width: 100%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    text-align: left;
+    border-radius: 5px;
+    padding: 10%;
+    position: relative;
+    font-size: 1.4rem;
+    transition: all 5s ease-in-out;
+    cursor: pointer;
+}
+
+body.light_mode .search_region .filter .filter_box {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    color: var(--Dark_Gray_Light_Mode_Input);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
+}
+
+.search_region .filter .filter_box .filter_by {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.search_region .filter .filter_box .filter_by .chev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_region .filter .filter_box .category {
+    width: 100%;
+    list-style: none;
+    padding: 3%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    border-radius: 5px;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    display: none;
+    transition: all 5s ease-in-out;
+}
+
+body.light_mode .search_region .filter .filter_box .category {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
+}
+
+.search_region .filter .filter_box .category li {
+    padding-top: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+.search_region .filter .filter_box .category li:hover {
+    opacity: 0.8;
+}
+
+.countries {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.countries .card {
+    width: 60%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10%;
+    transition: all 5s ease-in-out;
+}
+
+body.light_mode .countries .card {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
+}
+
+.countries .card .flag {
+    width: 100%;
+    height: 150px;
+}
+
+.countries .card .flag img {
+    width: 100%;
+    height: 100%;
+}
+
+.countries .card .card_info {
+    padding: 8% 5%;
+}
+
+.countries .card .card_info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.countries .card .card_info h2 {
+    margin: 2% auto 5% auto;
+    font-size: 2rem;
+}
+
+.countries .card .card_info h3 {
+    margin: auto auto 2% auto;
+    font-size: 1.3rem;
+}
+
+.countries .card .card_info h3 span {
+    font-weight: 400;
+}
+
+.load_more {
+    width: 100%;
+    padding: 2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.load_more .load {
+    width: 30%;
+    padding: 2% 1%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    font-family: inherit;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all 5s ease-in-out;
+    cursor: pointer;
+}
+
+body.light_mode .load_more .load {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
+    color: var(--Very_Dark_Blue_Light_Mode_Text);
+}
+
+@media screen and (min-width:960px) {
+    .load_more {
+        margin-bottom: 2%;
+    }
+    .load_more .load {
+        width: 10%;
+        padding: 1%;
+    }
+    .countries {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 10%;
+        padding-right: 10%;
+        justify-content: space-between;
+    }
+    .countries .card {
+        width: 30%;
+        margin-bottom: 4%;
+    }
+    .countries .card .card_info h2 {
+        font-size: 2.3rem;
+    }
+    .countries .card .card_info h3 {
+        font-size: 1.5rem;
+    }
+    .search_region .filter {
+        width: 12%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .search_region .filter .filter_box .category {
+        padding: 10%;
+    }
+    .search_region .filter .filter_box .category li {
+        padding-top: 5%;
+    }
+    .search_region {
+        margin-top: 2%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .search_region .search_bar {
+        width: 30%;
+        margin-left: 5%;
+        padding: 1%;
+        margin-bottom: auto;
+    }
+    .search_region .search_bar .search_icon {
+        margin-left: 5%;
+    }
+    .search_region .search_bar .search_form {
+        width: 80%;
+    }
+    nav {
+        padding: 2% 2%;
+    }
+    nav .logo {
+        width: 50%;
+        margin-left: 4%;
+    }
+    nav .logo h1 {
+        font-size: 1.8rem;
+    }
+    nav .modes {
+        width: 8%;
+    }
+}
